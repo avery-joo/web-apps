@@ -1,0 +1,26 @@
+<%
+die1 = rand(1..6)
+die2 = rand(1..6)
+total = die1 + die2
+%>
+
+<div class="casino-wrapper">
+  <h1 class="casino-title">Lucky Dice</h1>
+  <div class="casino-subtitle">~ Las Vegas ~</div>
+
+  <div class="dice-table">
+    <div class="dice-felt">
+      <div class="dice-pair">
+        <div class="die">
+          <img src="/images/dice/<%= die1 %>.svg" alt="Die showing <%= die1 %>">
+        </div>
+        <div class="die">
+          <img src="/images/dice/<%= die2 %>.svg" alt="Die showing <%= die2 %>">
+        </div>
+      </div>
+      <div class="dice-total">Total: <%= total %></div>
+    </div>
+  </div>
+
+  <a href="/dice" class="roll-btn">Roll Again!</a>
+</div>
